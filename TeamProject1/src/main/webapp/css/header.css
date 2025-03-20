@@ -84,16 +84,26 @@ a:focus, a:hover {
 
 #header .right {
 	margin-right: 10px;
+	display:flex;
+	justify-content:flex-end;
+	align-items:center;
+	padding-right:20px;
+	
+}
+#header .right a{
+	display:block;
+	margin-left:10px;
 }
 
-#header .searchBtn {
-	display: inline;
+#header .right a img{
+	width:20px;
 }
 
-#header .icon {
-	margin-right: 10px;
+#header .right .logoutBtn{
+	display:none;
 }
 
+ 
 #header .right a span {
 	width: 20px;
 	height: 1px;
@@ -109,13 +119,6 @@ a:focus, a:hover {
 	height: 100%;
 }
 
-#header .right a {
-	position: absolute;
-	z-index: 10;
-	right: 10px;
-	top: 50%;
-	transform: translate(-50%, -50%);
-}
 
 #header .right a.menubar:hover span:nth-child(1) {
 	width: 10px;
@@ -127,7 +130,6 @@ a:focus, a:hover {
 
 #header .right a.searchBtn img {
 	width: 25px;
-	margin-right: 20px;
 }
 
 /* 메뉴 스타일 수정 */

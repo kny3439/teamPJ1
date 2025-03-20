@@ -1,8 +1,9 @@
 var menubar = document.querySelector('.menubar');
 var menu = document.querySelector('.menu');
 var closing = document.querySelector('.closed');
-var html = document.querySelector('html');
-
+var login = document.querySelector('.loginBtn');
+var logout = document.querySelector('.logoutBtn');
+var html  = document.querySelector('html');
 var logo = document.querySelector('.logo');
 var mygroupIcon = document.querySelector('.menuIcon.mygroupIcon');
 var homeIcon = document.querySelector('.menuIcon.homeIcon');
@@ -12,12 +13,40 @@ var myConsultIcon = document.querySelector('.menuIcon.myConsultIcon');
 var anounceIcon = document.querySelector('.menuIcon.anounceIcon');
 var alterInfo = document.querySelector('.alterInfo');
 
+var username = sessionStorage.getItem("userId");
+// 로그인 되어있으면 로그아웃버튼을, 아니면 로그인 버튼을 보임
+
+if(!username){
+	logout.style.display='none';
+	login.style.display='block';
+}
+else{
+	login.style.display='none';
+	logout.style.display='block';
+}
+
+
+
+
 // 로고 홈으로 이동
 logo.onclick=function(){
 	event.preventDefault();
 	window.location.href="home.jsp";
 }
 
+// 로그인
+login.onclick=function(){
+	event.preventDefault();
+	window.location.href="login.jsp";
+}
+
+logout.onclick=function(){
+	event.preventDefault();
+	
+	// 회원정보 삭제 후 홈으로
+	sessionStorage.removeItem('userId');
+	window.location.href='home.jsp';
+}
 
 // 프로필 편집
 alterInfo.onclick=function(){
