@@ -2,18 +2,18 @@ package pieum.user.model;
 
 import java.sql.Timestamp;
 
-public class GroupDto {
+public class GroupDTO {
 
 	private String gno;
 	private String gName;
 	private int gMemberCt;
 	private Timestamp gRegdate;
 	
-	public GroupDto() {
+	public GroupDTO() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public GroupDto(String gno, String gName, int gMemberCt, Timestamp gRegdate) {
+	public GroupDTO(String gno, String gName, int gMemberCt, Timestamp gRegdate) {
 		super();
 		this.gno = gno;
 		this.gName = gName;

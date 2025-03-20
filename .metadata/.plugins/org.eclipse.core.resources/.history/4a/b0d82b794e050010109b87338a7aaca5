@@ -1,0 +1,5 @@
+package pieum.user.model;
+
+public interface LikeMapper {
+
+}
